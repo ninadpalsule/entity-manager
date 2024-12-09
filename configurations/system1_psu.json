@@ -5,15 +5,17 @@
                 "Address": "0x58",
                 "Bus": "2",
                 "Labels": [
-                    "iin2",
-                    "iout2",
-                    "vin2",
-                    "vout2",
-                    "pin2",
-                    "pout2",
-                    "temp1"
+                    "iin",
+                    "iout1",
+                    "vin",
+                    "vout1",
+                    "pin",
+                    "tempA1",
+                    "maxtempA1",
+                    "tempB1",
+                    "fan1"
                 ],
-                "Name": "BCM0_TEMP",
+                "Name": "PSU0",
                 "Name1": "BCM0",
                 "PollRate": 5.0,
                 "PowerState": "Always",
@@ -21,7 +23,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 4.1,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 410
@@ -29,7 +31,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 3.65,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "lower critical",
                         "Severity": 1,
                         "Value": 365
@@ -37,7 +39,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 4,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 400
@@ -45,7 +47,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 3.8,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "lower non critical",
                         "Severity": 0,
                         "Value": 380
@@ -53,7 +55,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.05,
-                        "Label": "iin2",
+                        "Label": "iin",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 5.0
@@ -61,7 +63,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.04,
-                        "Label": "iin2",
+                        "Label": "iin",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 4
@@ -69,7 +71,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 1.25,
-                        "Label": "temp1",
+                        "Label": "tempA1",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 125.0
@@ -77,15 +79,52 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 1.1,
-                        "Label": "temp1",
+                        "Label": "tempA1",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 110.0
                     },
                     {
+                        "Direction": "less than",
+                        "Label": "maxtempA1",
+                        "Name": "lower critical",
+                        "Severity": 1,
+                        "Value": 0
+                    },
+                    {
+                        "Direction": "greater than",
+                        "Hysteresis": 1.25,
+                        "Label": "tempB1",
+                        "Name": "upper critical",
+                        "Severity": 1,
+                        "Value": 125.0
+                    },
+                    {
+                        "Direction": "greater than",
+                        "Hysteresis": 1.1,
+                        "Label": "tempB1",
+                        "Name": "upper non critical",
+                        "Severity": 0,
+                        "Value": 110.0
+                    },
+		    {
+                        "Direction": "less than",
+                        "Label": "fan1",
+                        "Name": "lower critical",
+                        "Severity": 1,
+                        "Value": 100
+                    },
+                    {
+                        "Direction": "greater than",
+                        "Label": "fan1",
+                        "Name": "upper critical",
+                        "Severity": 1,
+                        "Value": 9000
+                    },
+                    {
                         "Direction": "greater than",
                         "Hysteresis": 1.45,
-                        "Label": "iout2",
+                        "Label": "iout1",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 145
@@ -93,7 +132,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 1.25,
-                        "Label": "iout2",
+                        "Label": "iout1",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 125
@@ -101,7 +140,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.133,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 13.3
@@ -109,7 +148,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 0.11080000000000001,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "lower critical",
                         "Severity": 1,
                         "Value": 11.08
@@ -117,7 +156,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.128,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 12.8
@@ -125,7 +164,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 0.1168,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "lower non critical",
                         "Severity": 0,
                         "Value": 11.68
@@ -155,15 +194,17 @@
                 "Address": "0x59",
                 "Bus": "2",
                 "Labels": [
-                    "iin2",
-                    "iout2",
-                    "vin2",
-                    "vout2",
-                    "pin2",
-                    "pout2",
-                    "temp1"
+                    "iin",
+                    "iout1",
+                    "vin",
+                    "vout1",
+                    "pin",
+                    "tempA1",
+                    "maxtempA1",
+                    "tempB1",
+                    "fan1"
                 ],
-                "Name": "BCM1_TEMP",
+                "Name": "PSU1",
                 "Name1": "BCM1",
                 "PollRate": 5.0,
                 "PowerState": "Always",
@@ -171,7 +212,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 4.1,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 410
@@ -179,7 +220,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 3.65,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "lower critical",
                         "Severity": 1,
                         "Value": 365
@@ -187,7 +228,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 4,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 400
@@ -195,7 +236,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 3.8,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "lower non critical",
                         "Severity": 0,
                         "Value": 380
@@ -203,7 +244,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.05,
-                        "Label": "iin2",
+                        "Label": "iin",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 5
@@ -211,7 +252,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.04,
-                        "Label": "iin2",
+                        "Label": "iin",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 4
@@ -219,7 +260,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 1.25,
-                        "Label": "temp1",
+                        "Label": "tempA1",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 125.0
@@ -227,15 +268,52 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 1.1,
-                        "Label": "temp1",
+                        "Label": "tempA1",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 110.0
                     },
                     {
+                        "Direction": "less than",
+                        "Label": "maxtempA1",
+                        "Name": "lower critical",
+                        "Severity": 1,
+                        "Value": 0
+                    },
+                    {
+                        "Direction": "greater than",
+                        "Hysteresis": 1.25,
+                        "Label": "tempB1",
+                        "Name": "upper critical",
+                        "Severity": 1,
+                        "Value": 125.0
+                    },
+                    {
+                        "Direction": "greater than",
+                        "Hysteresis": 1.1,
+                        "Label": "tempB1",
+                        "Name": "upper non critical",
+                        "Severity": 0,
+                        "Value": 110.0
+                    },
+		    {
+                        "Direction": "less than",
+                        "Label": "fan1",
+                        "Name": "lower critical",
+                        "Severity": 1,
+                        "Value": 100
+                    },
+                    {
+                        "Direction": "greater than",
+                        "Label": "fan1",
+                        "Name": "upper critical",
+                        "Severity": 1,
+                        "Value": 9000
+                    },
+                    {
                         "Direction": "greater than",
                         "Hysteresis": 1.45,
-                        "Label": "iout2",
+                        "Label": "iout1",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 145
@@ -243,7 +321,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 1.25,
-                        "Label": "iout2",
+                        "Label": "iout1",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 125
@@ -251,7 +329,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.133,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 13.3
@@ -259,7 +337,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 0.11080000000000001,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "lower critical",
                         "Severity": 1,
                         "Value": 11.08
@@ -267,7 +345,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.128,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 12.8
@@ -275,7 +353,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 0.1168,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "lower non critical",
                         "Severity": 0,
                         "Value": 11.68
@@ -305,15 +383,17 @@
                 "Address": "0x5a",
                 "Bus": "2",
                 "Labels": [
-                    "iin2",
-                    "iout2",
-                    "vin2",
-                    "vout2",
-                    "pin2",
-                    "pout2",
-                    "temp1"
+                    "iin",
+                    "iout1",
+                    "vin",
+                    "vout1",
+                    "pin",
+                    "tempA1",
+                    "maxtempA1",
+                    "tempB1",
+                    "fan1"
                 ],
-                "Name": "BCM2_TEMP",
+                "Name": "PSU2",
                 "Name1": "BCM2",
                 "PollRate": 5.0,
                 "PowerState": "Always",
@@ -321,7 +401,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 4.1,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 410
@@ -329,7 +409,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 3.65,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "lower critical",
                         "Severity": 1,
                         "Value": 365
@@ -337,7 +417,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 4,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 400
@@ -345,7 +425,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 3.8,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "lower non critical",
                         "Severity": 0,
                         "Value": 380
@@ -353,7 +433,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.05,
-                        "Label": "iin2",
+                        "Label": "iin",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 5
@@ -361,7 +441,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.04,
-                        "Label": "iin2",
+                        "Label": "iin",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 4
@@ -369,7 +449,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 1.25,
-                        "Label": "temp1",
+                        "Label": "tempA1",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 125.0
@@ -377,15 +457,52 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 1.1,
-                        "Label": "temp1",
+                        "Label": "tempA1",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 110.0
                     },
                     {
+                        "Direction": "less than",
+                        "Label": "maxtempA1",
+                        "Name": "lower critical",
+                        "Severity": 1,
+                        "Value": 0
+                    },
+                    {
+                        "Direction": "greater than",
+                        "Hysteresis": 1.25,
+                        "Label": "tempB1",
+                        "Name": "upper critical",
+                        "Severity": 1,
+                        "Value": 125.0
+                    },
+                    {
+                        "Direction": "greater than",
+                        "Hysteresis": 1.1,
+                        "Label": "tempB1",
+                        "Name": "upper non critical",
+                        "Severity": 0,
+                        "Value": 110.0
+                    },
+		    {
+                        "Direction": "less than",
+                        "Label": "fan1",
+                        "Name": "lower critical",
+                        "Severity": 1,
+                        "Value": 100
+                    },
+                    {
+                        "Direction": "greater than",
+                        "Label": "fan1",
+                        "Name": "upper critical",
+                        "Severity": 1,
+                        "Value": 9000
+                    },
+                    {
                         "Direction": "greater than",
                         "Hysteresis": 1.45,
-                        "Label": "iout2",
+                        "Label": "iout1",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 145
@@ -393,7 +510,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 1.25,
-                        "Label": "iout2",
+                        "Label": "iout1",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 125
@@ -401,7 +518,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.133,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 13.3
@@ -409,7 +526,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 0.11080000000000001,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "lower critical",
                         "Severity": 1,
                         "Value": 11.08
@@ -417,7 +534,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.128,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 12.8
@@ -425,7 +542,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 0.1168,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "lower non critical",
                         "Severity": 0,
                         "Value": 11.68
@@ -455,15 +572,17 @@
                 "Address": "0x5b",
                 "Bus": "2",
                 "Labels": [
-                    "iin2",
-                    "iout2",
-                    "vin2",
-                    "vout2",
-                    "pin2",
-                    "pout2",
-                    "temp1"
+                    "iin",
+                    "iout1",
+                    "vin",
+                    "vout1",
+                    "pin",
+                    "tempA1",
+                    "maxtempA1",
+                    "tempB1",
+                    "fan1"
                 ],
-                "Name": "BCM3_TEMP",
+                "Name": "PSU3",
                 "Name1": "BCM3",
                 "PollRate": 5.0,
                 "PowerState": "Always",
@@ -471,7 +590,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 4.1,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 410
@@ -479,7 +598,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 3.65,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "lower critical",
                         "Severity": 1,
                         "Value": 365
@@ -487,7 +606,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 4,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 400
@@ -495,7 +614,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 3.8,
-                        "Label": "vin2",
+                        "Label": "vin",
                         "Name": "lower non critical",
                         "Severity": 0,
                         "Value": 380
@@ -503,7 +622,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.05,
-                        "Label": "iin2",
+                        "Label": "iin",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 5
@@ -511,7 +630,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.04,
-                        "Label": "iin2",
+                        "Label": "iin",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 4
@@ -519,7 +638,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 1.25,
-                        "Label": "temp1",
+                        "Label": "tempA1",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 125.0
@@ -527,15 +646,52 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 1.1,
-                        "Label": "temp1",
+                        "Label": "tempA1",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 110.0
                     },
                     {
+                        "Direction": "less than",
+                        "Label": "maxtempA1",
+                        "Name": "lower critical",
+                        "Severity": 1,
+                        "Value": 0
+                    },
+                    {
+                        "Direction": "greater than",
+                        "Hysteresis": 1.25,
+                        "Label": "tempB1",
+                        "Name": "upper critical",
+                        "Severity": 1,
+                        "Value": 125.0
+                    },
+                    {
+                        "Direction": "greater than",
+                        "Hysteresis": 1.1,
+                        "Label": "tempB1",
+                        "Name": "upper non critical",
+                        "Severity": 0,
+                        "Value": 110.0
+                    },
+		    {
+                        "Direction": "less than",
+                        "Label": "fan1",
+                        "Name": "lower critical",
+                        "Severity": 1,
+                        "Value": 100
+                    },
+                    {
+                        "Direction": "greater than",
+                        "Label": "fan",
+                        "Name": "upper critical",
+                        "Severity": 1,
+                        "Value": 9000
+                    },
+                    {
                         "Direction": "greater than",
                         "Hysteresis": 1.45,
-                        "Label": "iout2",
+                        "Label": "iout1",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 145
@@ -543,7 +699,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 1.25,
-                        "Label": "iout2",
+                        "Label": "iout1",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 125
@@ -551,7 +707,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.133,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "upper critical",
                         "Severity": 1,
                         "Value": 13.3
@@ -559,7 +715,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 0.11080000000000001,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "lower critical",
                         "Severity": 1,
                         "Value": 11.08
@@ -567,7 +723,7 @@
                     {
                         "Direction": "greater than",
                         "Hysteresis": 0.128,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "upper non critical",
                         "Severity": 0,
                         "Value": 12.8
@@ -575,7 +731,7 @@
                     {
                         "Direction": "less than",
                         "Hysteresis": 0.1168,
-                        "Label": "vout2",
+                        "Label": "vout1",
                         "Name": "lower non critical",
                         "Severity": 0,
                         "Value": 11.68
